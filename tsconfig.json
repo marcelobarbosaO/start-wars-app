@@ -25,17 +25,16 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "paths": {
-      "*": ["src/utils/types/*.ts"],
-      "Assets": ["src/assets"],
-      "Components": ["src/components"],
-      "Scenes": ["src/scenes"],
-      "Services": ["src/services"],
-      "Utils": ["src/utils"],
-      "Utils/types": ["src/utils/types"]
+      "*": ["./src/utils/types/*.ts"],
+      "~/assets/*": ["./src/assets"],
+      "~/components/*": ["./src/components"],
+      "~/scenes/*": ["./src/scenes/*"],
+      "~/services/*": ["./src/services"],
+      "~/utils/*": ["./src/utils"],
     }
   },
-  "include": ["src/**/*"],
-  "types": ["src/utils/types/*"],
+  "include": ["./src/**/*"],
+  "types": ["./src/utils/types/*"],
   "exclude": [
     "node_modules",
     "__tests__/" // exclude test files
