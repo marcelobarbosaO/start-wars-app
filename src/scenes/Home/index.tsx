@@ -90,7 +90,7 @@ const Home = () => {
             <LeftContent>
               {page > 1 && (
                 <Button onPress={() => prevPage()}>
-                  <Text>anterior</Text>
+                  <Text>prev</Text>
                 </Button>
               )}
             </LeftContent>
@@ -100,7 +100,7 @@ const Home = () => {
             <RightContent>
               {page < totalPages && (
                 <Button onPress={() => nextPage()}>
-                  <Text>próximo</Text>
+                  <Text>next</Text>
                 </Button>
               )}
             </RightContent>
@@ -122,7 +122,7 @@ const Home = () => {
       <StatusBar barStyle="light-content" />
       <Container>
         <Logo source={logo} resizeMode="contain" />
-        <Title>Personagens</Title>
+        <Title>Characters</Title>
         {renderPeople()}
       </Container>
     </Background>
