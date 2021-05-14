@@ -1,14 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { ImageBackground, StatusBar, Dimensions } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { StatusBar } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 
 import Item from './Item';
 
 import { fetchPeople } from '~/services/api';
-import { showAlert } from '~/utils/helpers';
+import { showAlert, windowWidth } from '~/utils/helpers';
 
 import {
   Container,
+  Background,
   Logo,
   Title,
   Text,
@@ -21,15 +22,12 @@ import {
 const espaco = require('~/assets/espaco.png');
 const logo = require('~/assets/logo.png');
 
-const sliderWidth = Dimensions.get('window').width;
-
 type ItemProps = {
   item: People;
   index: number;
 };
 
 const Home = () => {
-  const carousel = useRef(null);
   const [people, setPeople] = useState<People[]>([]);
 
   const getPeople = async () => {
@@ -50,22 +48,16 @@ const Home = () => {
   }, []);
 
   return (
-    <ImageBackground source={espaco} style={{ flex: 1 }} resizeMode="cover">
+    <Background source={espaco} resizeMode="cover">
       <StatusBar barStyle="light-content" />
       <Container>
         <Logo source={logo} resizeMode="contain" />
         <Title>Personagens</Title>
         {people.length > 0 && (
-          // <List
-          //   data={people}
-          //   keyExtractor={(item: People | any) => item.name}
-          //   renderItem={renderItem}
-          // />
           <Carousel
-            ref={carousel}
             data={people}
             renderItem={renderItem}
-            sliderWidth={sliderWidth}
+            sliderWidth={windowWidth}
             itemWidth={300}
           />
         )}
@@ -82,7 +74,7 @@ const Home = () => {
           </RightContent>
         </Pagination>
       </Container>
-    </ImageBackground>
+    </Background>
   );
 };
 
