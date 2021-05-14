@@ -1,3 +1,5 @@
+import { isIOS } from '~/utils/helpers';
+
 export default {
   title: 'dark',
 
@@ -24,5 +26,9 @@ export default {
     gray: '#ABB7CD',
     lightGray: '#F3F6FC',
     lightGraySecondary: '#DBE2EC',
+  },
+
+  typography: {
+    normal: isIOS ? 'Star Jedi' : 'Starjedi',
   },
 } as Theme;
