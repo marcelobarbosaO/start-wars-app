@@ -1,0 +1,10 @@
+a528a74932265d237fe74602a8e50b90
+"use strict";require("react-native");
+var _react = _interopRequireDefault(require("react"));
+var _reactTestRenderer = _interopRequireDefault(require("react-test-renderer"));
+
+var _src = _interopRequireDefault(require("../src"));var _this = this,_jsxFileName = "/Users/marcelo/Desktop/CreativeBit/PersonalApps/starWarsApp/__tests__/App-test.js";function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+it('renders correctly', function () {
+  _reactTestRenderer.default.create(_react.default.createElement(_src.default, { __self: _this, __source: { fileName: _jsxFileName, lineNumber: 8, columnNumber: 19 } }));
+});

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "commonjs",
+    "target": "es2017",
+    "module": "ESNext",
     "allowJs": true,
     "resolveJsonModule": true,
     "jsx": "react-native",

@@ -9,7 +9,6 @@ module.exports = {
   collectCoverage: false,
   coverageThreshold: {
     global: {
-      // @TODO: Revisitar esse ponto quando tivermos tempo de criar testes
       branches: 0,
       functions: 20,
       lines: 80,
