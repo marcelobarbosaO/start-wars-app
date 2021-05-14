@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Detail, Title, Image, ImageView } from './styles';
+import { Actions } from 'react-native-router-flux';
 
 type ItemProps = {
   person: People;
@@ -10,7 +11,7 @@ const image: string =
 
 const Item = ({ person }: ItemProps) => {
   return (
-    <Container>
+    <Container onPress={() => Actions.person({ person })}>
       <ImageView>
         <Image source={{ uri: image, width: 180, height: 180 }} resizeMode="contain" />
       </ImageView>
