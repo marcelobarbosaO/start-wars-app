@@ -1,11 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+
+import AppProvider from './context';
+import Routes from '~/config/routes';
 
 const App = () => {
   return (
-    <View>
-      <Text>asdsa</Text>
-    </View>
+    <AppProvider>
+      <Routes />
+    </AppProvider>
   );
 };
 

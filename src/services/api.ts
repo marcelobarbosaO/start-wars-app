@@ -14,9 +14,9 @@ const fetchPeople = async () => {
   }
 };
 
-const fetchPerson = async (personId: string) => {
+const fetchPerson = async (url: string) => {
   try {
-    return await api.get(`people/${personId}`);
+    return await api.get(url);
   } catch (error) {
     if (error.response) {
       return error.response;

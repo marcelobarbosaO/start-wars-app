@@ -5,7 +5,9 @@
       "*": ["src/*"],
       "~/assets": ["src/assets"],
       "~/components": ["src/components"],
+      "~/config": ["./src/config"],
       "~/scenes": ["src/scenes"],
+      "~/context": ["./src/context"],
       "~/services": ["src/services"],
       "~/utils": ["src/utils"],
     }

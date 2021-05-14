@@ -26,11 +26,13 @@
     "esModuleInterop": true,
     "paths": {
       "*": ["./src/utils/types/*.ts"],
-      "~/assets/*": ["./src/assets"],
-      "~/components/*": ["./src/components"],
+      "~/assets/*": ["./src/assets/*"],
+      "~/config/*": ["./src/config/*"],
+      "~/context/*": ["./src/context/*"],
+      "~/components/*": ["./src/components/*"],
       "~/scenes/*": ["./src/scenes/*"],
-      "~/services/*": ["./src/services"],
-      "~/utils/*": ["./src/utils"],
+      "~/services/*": ["./src/services/*"],
+      "~/utils/*": ["./src/utils/*"],
     }
   },
   "include": ["./src/**/*"],

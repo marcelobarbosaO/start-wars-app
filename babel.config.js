@@ -10,6 +10,8 @@ module.exports = {
           '~/assets': ['./src/assets'],
           '~/components': ['./src/components'],
           '~/scenes': ['./src/scenes'],
+          '~/config': ['./src/config'],
+          '~/context': ['./src/context'],
           '~/services': ['./src/services'],
           '~/utils': ['./src/utils'],
         },
