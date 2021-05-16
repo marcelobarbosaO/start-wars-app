@@ -30,7 +30,7 @@ export const Text = styled.Text`
 `;
 
 export const Name = styled.Text`
-  font-family: ${({ theme }: any) => theme.typography.normal};
+  font-family: 'Star Jedi';
   color: #000;
   font-size: 20px;
   letter-spacing: 2px;
@@ -63,7 +63,7 @@ export const Button = styled.TouchableOpacity`
 `;
 
 export const ButtonText = styled.Text`
-  font-family: ${({ theme }: any) => theme.typography.normal};
+  font-family: 'Star Jedi';
   color: #f90;
   font-size: 13px;
   letter-spacing: 2px;

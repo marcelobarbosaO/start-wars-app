@@ -7,3 +7,7 @@ declare interface Theme {
     [key: string]: string;
   };
 }
+
+declare interface ThemeContextData {
+  theme: Theme;
+}

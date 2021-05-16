@@ -15,6 +15,10 @@ module.exports = {
       statements: 80,
     },
   },
+  setupFiles: ['<rootDir>/jest.setup.js'],
+  transformIgnorePatterns: [
+    'node_modules/(?!@react-native|react-native|redux-persist/es/createTransform|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*)',
+  ],
   transform: {
     ...tsjPreset.transform,
     '\\.js$': '<rootDir>/node_modules/react-native/jest/preprocessor.js',

@@ -1,5 +1,7 @@
 import styled from 'styled-components/native';
 
+const font = 'Star Jedi';
+
 export const Background = styled.ImageBackground`
   flex: 1;
 `;
@@ -15,7 +17,7 @@ export const Logo = styled.Image`
 `;
 
 export const Title = styled.Text`
-  font-family: ${({ theme }: any) => theme.typography.normal};
+  font-family: ${font};
   color: #fff;
   font-size: 23px;
   letter-spacing: 2px;
@@ -24,14 +26,14 @@ export const Title = styled.Text`
 `;
 
 export const Text = styled.Text`
-  font-family: ${({ theme }: any) => theme.typography.normal};
+  font-family: ${font};
   color: #f90;
   font-size: 13px;
   letter-spacing: 2px;
 `;
 
 export const TextPage = styled.Text`
-  font-family: ${({ theme }: any) => theme.typography.normal};
+  font-family: ${font};
   color: #f90;
   font-size: 16px;
   line-height: 25px;
