@@ -42,3 +42,26 @@ jest.mock('react-native-reanimated', () => {
 
   return Reanimated;
 });
+
+jest.mock('react-native', () => {
+  const RN = jest.requireActual('react-native');
+
+  return Object.setPrototypeOf(
+    {
+      Alert: {
+        ...RN.Alert,
+        alert: jest.fn(),
+      },
+      Platform: {
+        OS: 'ios',
+        select: jest.fn(),
+      },
+      Dimensions: {
+        get: jest.fn().mockReturnValue({ width: 100, height: 100 }),
+      },
+    },
+    RN,
+  );
+});
+
+jest.useFakeTimers();

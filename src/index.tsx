@@ -1,13 +1,14 @@
 import React from 'react';
+import { ThemeProvider as Provider } from 'styled-components';
 
-import AppProvider from './context';
 import Routes from '~/config/routes';
+import theme from './themes';
 
 const App = () => {
   return (
-    <AppProvider>
+    <Provider theme={theme}>
       <Routes />
-    </AppProvider>
+    </Provider>
   );
 };
 
