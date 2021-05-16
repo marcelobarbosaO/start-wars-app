@@ -7,7 +7,7 @@
     "clean:android": "cd android && ./gradlew clean && cd ..",
     "ios": "npx solidarity && react-native run-ios",
     "start": "npx solidarity && react-native start --reset-cache",
-    "test": "jest",
+    "test": "jest --ci --runInBand --coverage --reporters=default --reporters=jest-junit",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
@@ -31,6 +31,9 @@
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@testing-library/jest-native": "^4.0.1",
+    "@testing-library/react-hooks": "^5.1.2",
+    "@testing-library/react-native": "^7.2.0",
     "@types/react": "^17.0.5",
     "@types/react-native": "^0.64.5",
     "@types/react-native-snap-carousel": "^3.8.3",
@@ -43,6 +46,7 @@
     "eslint-import-resolver-babel-module": "^5.3.1",
     "eslint-plugin-import": "^2.23.0",
     "jest": "^26.6.3",
+    "jest-junit": "^12.0.0",
     "metro-react-native-babel-preset": "^0.64.0",
     "react-test-renderer": "17.0.1",
     "solidarity": "^3.0.4",
