@@ -2,8 +2,8 @@ import 'react-native';
 import * as React from 'react';
 import renderer from 'react-test-renderer';
 
-import EmptyContent from '../../src/components/EmptyContent';
+import Loading from '../../src/components/Loading';
 
 it('renders correctly', () => {
-  renderer.create(<EmptyContent text="teste" />);
+  renderer.create(<Loading />);
 });
