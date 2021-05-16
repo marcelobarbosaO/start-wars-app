@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
+import { isIOS } from '~/utils/helpers';
 
-const font = 'Star Jedi';
+const font = isIOS ? 'Star Jedi' : 'Starjedi';
 
 export const Background = styled.ImageBackground`
   flex: 1;

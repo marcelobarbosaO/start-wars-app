@@ -1,10 +1,17 @@
 import styled from 'styled-components/native';
+import { isIOS } from '~/utils/helpers';
+
+const font = isIOS ? 'Star Jedi' : 'Starjedi';
 
 export const Background = styled.ImageBackground`
   flex: 1;
 `;
 
 export const Container = styled.SafeAreaView`
+  flex: 1;
+`;
+
+export const Scroll = styled.ScrollView`
   flex: 1;
 `;
 
@@ -30,7 +37,7 @@ export const Text = styled.Text`
 `;
 
 export const Name = styled.Text`
-  font-family: 'Star Jedi';
+  font-family: ${font};
   color: #000;
   font-size: 20px;
   letter-spacing: 2px;
@@ -58,12 +65,12 @@ export const Button = styled.TouchableOpacity`
   border-radius: 10px;
   padding: 12px 20px;
   margin-horizontal: 20px;
-  margin-top: 20px;
+  margin-vertical: 20px;
   align-items: center;
 `;
 
 export const ButtonText = styled.Text`
-  font-family: 'Star Jedi';
+  font-family: ${font};
   color: #f90;
   font-size: 13px;
   letter-spacing: 2px;
