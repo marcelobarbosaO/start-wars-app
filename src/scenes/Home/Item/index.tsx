@@ -11,7 +11,7 @@ const image: string =
 
 const Item = ({ person }: ItemProps) => {
   return (
-    <Container onPress={() => Actions.person({ person })}>
+    <Container testID={`person-card-${person.name}`} onPress={() => Actions.person({ person })}>
       <ImageView>
         <Image source={{ uri: image, width: 180, height: 180 }} resizeMode="contain" />
       </ImageView>

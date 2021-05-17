@@ -64,4 +64,16 @@ jest.mock('react-native', () => {
   );
 });
 
+jest.mock('react-native-router-flux', () => ({
+  Router: jest.fn(),
+  Actions: {
+    replace: jest.fn(),
+    person: jest.fn(),
+    pop: jest.fn(),
+  },
+  ActionConst: {
+    RESET: jest.fn(),
+  },
+}));
+
 jest.useFakeTimers();

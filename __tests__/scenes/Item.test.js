@@ -1,11 +1,9 @@
 import 'react-native';
 import * as React from 'react';
-import renderer from 'react-test-renderer';
-import { ThemeProvider as Provider } from 'styled-components';
 import { render, fireEvent } from '@testing-library/react-native';
+import renderer from 'react-test-renderer';
 
-import Person from '../../src/scenes/Person';
-import theme from '../../src/themes';
+import Item from '../../src/scenes/Home/Item';
 
 const personData = {
   name: 'Luke Skywalker',
@@ -33,17 +31,13 @@ const personData = {
 };
 
 it('renders correctly', () => {
-  renderer.create(
-    <Provider theme={theme}>
-      <Person theme={theme} person={personData} />
-    </Provider>,
-  );
+  renderer.create(<Item person={personData} />);
 });
 
-it('should be click to back home', () => {
-  const { getByTestId } = render(<Person theme={theme} person={personData} />);
+it('should be click on card person', () => {
+  const { getByTestId } = render(<Item person={personData} />);
 
-  const element = getByTestId('back-to-home');
+  const element = getByTestId(`person-card-${personData.name}`);
 
   fireEvent.press(element);
 });

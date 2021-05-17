@@ -14,16 +14,4 @@ const fetchPeople = async (page: number) => {
   }
 };
 
-const fetchPerson = async (url: string) => {
-  try {
-    return await api.get(url);
-  } catch (error) {
-    if (error.response) {
-      return error.response;
-    }
-
-    return error;
-  }
-};
-
-export { fetchPeople, fetchPerson };
+export { fetchPeople, api };

@@ -70,7 +70,7 @@ const Person = ({ person }: PersonProps) => {
               <Text>{person.gender}</Text>
             </Row>
           </Content>
-          <Button onPress={() => Actions.pop()}>
+          <Button testID={'back-to-home'} onPress={() => Actions.pop()}>
             <ButtonText>back</ButtonText>
           </Button>
         </Scroll>
